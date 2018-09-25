@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>Graphing</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Untitled</title>
+  <link rel="author" href="humans.txt">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <style>
+    *{
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+      font-weight: 200;
+    }
+  </style>
+</head>
+<body>
+  <h1>Let's get a graph going</h1>
+  <button class="clear-data">Clear Data</button>
+  <form action="">
+    <div>
+      <label for="inputdata1">BatchSpeed Export CSVs, please:</label>
+      <input class="graphdatainput" type="file" value="/before.csv" id="inputdata1">
+    </div>
+  </form>
+  <div id="editor">
+    <div v-for="dat in data" style="margin-bottom: 0.6em;">Item: {{ dat }}</div>
+  </div>
+  <div id="myGraphDiv"></div>
+  <script src="bundle.js"></script>
+</body>
+</html>
