@@ -2,7 +2,7 @@
   "name": "speedcompare",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "ava",
     "test:watch": "npm test -- --watch",
@@ -10,7 +10,7 @@
     "build": "webpack -p src/index.js -o dist/bundle.js",
     "prestart": "yarn install",
     "serve": "node serve.js",
-    "start": "npm run build;npm run serve",
+    "start": "npm run build",
     "dev": "bash start-dev.sh"
   },
   "author": "",
