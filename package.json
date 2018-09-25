@@ -1,0 +1,35 @@
+{
+  "name": "speedcompare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "test:watch": "npm test -- --watch",
+    "build:watch": "webpack -d src/index.js -o dist/bundle.js --watch",
+    "build": "webpack -p src/index.js -o dist/bundle.js",
+    "prestart": "yarn install",
+    "serve": "node serve.js",
+    "start": "npm run build;npm run serve",
+    "dev": "bash start-dev.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^3.0.0",
+    "express": "^4.16.3",
+    "plotly.js-cartesian-dist": "^1.41.2",
+    "plotly.js-dist": "^1",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "ava": "^0.25.0",
+    "babel-loader": "^8.0.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
