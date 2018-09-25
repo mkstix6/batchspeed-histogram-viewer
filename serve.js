@@ -4,12 +4,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.use(express.static('dist'))
+app.use(express.static('.'))
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'))
 app.listen(port)
-
-
-
 
 // http.createServer(function (request, response) {
 //   fs.readFile('index.html', function (err, data) {
@@ -38,5 +35,4 @@ app.listen(port)
 //     response.end()
 //   })
 // }).listen(3000)
-
 
