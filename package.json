@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "ava",
+    "test": "nyc ava",
+    "test:nyan": "npm test -- --verbose --tap | tap-nyan",
     "test:watch": "npm test -- --watch",
     "build:watch": "webpack -d src/index.js -o dist/bundle.js --watch",
     "build": "webpack -p src/index.js -o dist/bundle.js",
@@ -29,7 +30,23 @@
     "@babel/register": "^7.0.0",
     "ava": "^0.25.0",
     "babel-loader": "^8.0.2",
+    "nyc": "^13.0.1",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+      "env": {
+    "development": {
+      "sourceMaps": "inline"
+    }
+  }
+  },
+  "ava": {
+    "require": [
+      "@babel/register"
+    ]
   }
 }
